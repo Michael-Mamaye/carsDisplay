@@ -1,0 +1,26 @@
+body {
+	background: transparent; /* Make it white if you need */
+	margin: 0;
+	padding: 10;
+	color: #72a24d;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	height: 0;
+	box-shadow: 10 20 2px 2px #72a24d;
+}
+::-webkit-scrollbar-thumb {
+	background: #72a24d;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 3px;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
