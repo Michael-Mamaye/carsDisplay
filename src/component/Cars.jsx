@@ -5,8 +5,11 @@ import { getCarsData } from "../controller/GetDataController";
 
 const Cars = () => {
 	const [imageChange, setImageChange] = useState(0);
-	const { isLoading, data: carsData } = useQuery(["theCarsList"], () =>
-		getCarsData()
+	const [page, setPage] = useState(1);
+	const { isLoading, data: carsData } = useQuery(
+		["theCarsList", page],
+		() => getCarsData(page),
+		{ keepPreviousData: true }
 	);
 	setInterval(() => {
 		if (imageChange + 1 === 3) {
@@ -14,7 +17,7 @@ const Cars = () => {
 		} else if (imageChange >= 0) {
 			return setImageChange(imageChange + 1);
 		}
-	}, 10000);
+	}, 20000);
 
 	if (isLoading) {
 		return (
@@ -61,6 +64,7 @@ const Cars = () => {
 				})}
 			</Grid>
 			<Button
+				onClick={() => setPage(page + 1)}
 				sx={{ m: 10, width: "100%", fontWeight: "bold", color: "#72a24d" }}>
 				Load More
 			</Button>
