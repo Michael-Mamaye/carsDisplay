@@ -1,0 +1,8 @@
+{
+	"short_name": "Car Display",
+	"name": "display cars",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
