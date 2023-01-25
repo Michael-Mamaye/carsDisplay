@@ -1,6 +1,6 @@
 {
 	"homepage": "http://Michael-Mamaye.github.io/carsDisplay",
-	"name": "hiber_frontend",
+	"name": "carsDisplay",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
